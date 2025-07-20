@@ -111,10 +111,12 @@
             opacity: 0.9;
         }
 
-        /* Enhanced Buttons */
+        /* Enhanced Buttons - Outlook Compatible */
         .button {
             display: inline-block;
             padding: 15px 30px;
+            background: #ff8c42;
+            /* Fallback for Outlook */
             background: linear-gradient(135deg, #ff8c42 0%, #ff6b1a 100%);
             color: #ffffff !important;
             text-decoration: none;
@@ -127,6 +129,16 @@
             box-shadow: 0 4px 15px rgba(255, 140, 66, 0.3);
             transition: all 0.3s ease;
             border: 1px solid #ff8c42;
+            mso-padding-alt: 15px 30px;
+            /* Outlook padding fix */
+        }
+
+        /* Outlook-specific button fixes */
+        .button a {
+            color: #ffffff !important;
+            text-decoration: none !important;
+            display: block;
+            mso-line-height-rule: exactly;
         }
 
         /* Feature sections */
@@ -234,7 +246,8 @@
         <!-- Header -->
         <tr>
             <td class="header">
-                <img src="https://raw.githubusercontent.com/CamreshJames/fe-email-client/refs/heads/main/src/main/resources/email-marketing/tatua-logo.png" alt="Tatua Logo" width="200" style="display: block; margin: 0 auto;" />
+                <img src="https://raw.githubusercontent.com/CamreshJames/fe-email-client/refs/heads/main/src/main/resources/email-marketing/tatua-logo.png"
+                    alt="Tatua Logo" width="200" style="display: block; margin: 0 auto;" />
                 <p class="newsletter-subtitle">See what's new in your Tatua dashboard this month</p>
                 <h1 class="newsletter-headline">What's New at Tatua</h1>
                 <p class="newsletter-subtitle">Monthly Update - January 2025</p>
@@ -260,7 +273,9 @@
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Try AI Routing</a>
+                                        <a href="https://app.tatua.com/features/ai-routing"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Try AI Routing</a>
                                     </td>
                                 </tr>
                             </table>
@@ -286,7 +301,9 @@
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Install Slack App</a>
+                                        <a href="https://slack.com/apps/tatua-integration"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Install Slack App</a>
                                     </td>
                                 </tr>
                             </table>
@@ -312,7 +329,9 @@
                             <table class="button-table" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="button">
-                                        <a href="#" style="color: #FFFFFF;">Read Full Case Study</a>
+                                        <a href="https://tatua.com/case-studies/medtech-solutions"
+                                            style="color: #FFFFFF; text-decoration: none; display: block;"
+                                            target="_blank">Read Full Case Study</a>
                                     </td>
                                 </tr>
                             </table>
@@ -338,9 +357,11 @@
                     <h2 class="subheading">Helpful Resources</h2>
                     <ul class="body-text feature-list" style="margin: 0; padding-left: 20px;">
                         <li><strong>Webinar:</strong> "Advanced Automation Strategies" - January 25, 2:00 PM PST</li>
-                        <li><strong>Guide:</strong> <a href="#">"10 Best Practices for Ticket Management"</a> -
+                        <li><strong>Guide:</strong> <a href="https://tatua.com/resources/best-practices-guide"
+                                target="_blank">"10 Best Practices for Ticket Management"</a> -
                             Download our latest best practices guide</li>
-                        <li><strong>Community:</strong> <a href="#">"Join the Tatua User Community"</a> - Connect
+                        <li><strong>Community:</strong> <a href="https://community.tatua.com" target="_blank">"Join the
+                                Tatua User Community"</a> - Connect
                             with other customers and share tips</li>
                     </ul>
                 </div>
@@ -352,15 +373,17 @@
                 <p class="footer-text">Questions about these updates? Contact our team at <a
                         href="mailto:updates@tatua.com">updates@tatua.com</a></p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">LinkedIn</a> |
-                    <a href="#" class="footer-link">Twitter</a> |
-                    <a href="#" class="footer-link">Facebook</a>
+                    <a href="https://linkedin.com/company/tatua" class="footer-link" target="_blank">LinkedIn</a> |
+                    <a href="https://twitter.com/tatua" class="footer-link" target="_blank">Twitter</a> |
+                    <a href="https://facebook.com/tatua" class="footer-link" target="_blank">Facebook</a>
                 </p>
                 <p class="footer-text">
-                    <a href="#" class="footer-link">Privacy Policy</a> |
-                    <a href="#" class="footer-link">Terms of Service</a> |
-                    <a href="#" class="footer-link">Update Preferences</a> |
-                    <a href="#" class="footer-link">Unsubscribe</a>
+                    <a href="https://tatua.com/privacy" class="footer-link" target="_blank">Privacy Policy</a> |
+                    <a href="https://tatua.com/terms" class="footer-link" target="_blank">Terms of Service</a> |
+                    <a href="https://tatua.com/preferences?email={{email}}" class="footer-link" target="_blank">Update
+                        Preferences</a> |
+                    <a href="https://tatua.com/unsubscribe?email={{email}}" class="footer-link"
+                        target="_blank">Unsubscribe</a>
                 </p>
             </td>
         </tr>
