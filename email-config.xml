@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<emailConfiguration type="ENCRYPTED" version="1.0">
+        
+    <metadata>
+                
+        <created>2025-01-18</created>
+                
+        <description>Tatua Email Marketing Configuration</description>
+                
+        <security>NIS-LEVEL</security>
+            
+    </metadata>
+        
+    
+    <smtpSettings>
+                
+        <host>smtp.gmail.com</host>
+                
+        <port>587</port>
+                
+        <username>ENC:6+7z43SVmdc9gMZQjjpciDz/Ri5smW89shJ/7QhlL3hJoF0nN80J52T8CyFaCwzoPLUjyiegMoYePAz6Xc4wzR4AXS/HNUPE5tgiM1ajRVFkHLLispXI</username>
+                
+        <password>ENC:xSTtbIZxc1OUeaETcvn471VLMmEtQGddJZPZjn6O7kVD+jgWpjAv7BWgDYsPfesj8+IaOy4pxSf6dnZkQHaFZWjND0lKcT6kt2/sPw==</password>
+                
+        <useSSL>false</useSSL>
+                
+        <useTLS>true</useTLS>
+                
+        <connectionTimeout>30000</connectionTimeout>
+                
+        <readTimeout>30000</readTimeout>
+            
+    </smtpSettings>
+        
+    
+    <recipients>
+                
+        <recipient>
+                        
+            <name>Sammy Obeezy</name>
+                        
+            <email>barasam07@gmail.com</email>
+                        
+            <type>PRIMARY</type>
+                        
+            <active>true</active>
+                    
+        </recipient>
+                
+        <recipient>
+            <name>Sammy Obeezy</name>
+                        
+            <email>barasam07@gmail.com</email>
+                        
+            <type>TEST</type>
+                        
+            <active>false</active>
+                    
+        </recipient>
+            
+    </recipients>
+        
+    
+    <templates>
+                
+        <template>
+                        
+            <name>welcome</name>
+                        
+            <path>email-marketing/welcome-email.html</path>
+                        
+            <subject>Welcome to Tatua - Let's Get Started!</subject>
+                        
+            <active>true</active>
+                    
+        </template>
+                
+        <template>
+                        
+            <name>trial-expiration</name>
+                        
+            <path>email-marketing/trial-expiration-email.html</path>
+                        
+            <subject>Your Tatua Trial Expires Tomorrow - Don't Lose Your Data</subject>
+                        
+            <active>true</active>
+                    
+        </template>
+                
+        <template>
+                        
+            <name>product-update</name>
+                        
+            <path>email-marketing/product-update-newsletter.html</path>
+                        
+            <subject>New Features: AI-Powered Ticket Routing &amp; More</subject>
+                        
+            <active>true</active>
+                    
+        </template>
+            
+    </templates>
+        
+    
+    <security>
+                
+        <encryptionAlgorithm>AES-256-GCM</encryptionAlgorithm>
+                
+        <keyDerivation>PBKDF2</keyDerivation>
+                
+        <iterations>100000</iterations>
+                
+        <saltLength>32</saltLength>
+            
+    </security>
+        
+    
+    <logging>
+                
+        <level>INFO</level>
+                
+        <auditTrail>true</auditTrail>
+                
+        <logFile>email-client.log</logFile>
+            
+    </logging>
+    
+</emailConfiguration>
